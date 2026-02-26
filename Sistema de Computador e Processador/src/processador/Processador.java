@@ -10,6 +10,12 @@ public class Processador {
         this.frequenciaGHz = 0.0;
         this.nucleos = 0;
     }
+
+    public Processador(String modelo, double frequenciaGHz, int nucleos){
+        this.modelo = modelo;
+        this.frequenciaGHz = frequenciaGHz;
+        this.nucleos = nucleos;
+    }
     
     public String getModelo (){
         return modelo;
@@ -35,7 +41,7 @@ public class Processador {
         this.nucleos = nucleos;
     }
     
-    public String virarString() {
+    public String toString() {
         return "Modelo = " + modelo + "\nFrequencia (GHz) = " + frequenciaGHz + "\nNucleos = " + nucleos;
     }
 }
