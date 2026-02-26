@@ -11,6 +11,12 @@ public class Computador {
         this.memoriaRAM = 0;
         this.processador = new Processador();
     }
+
+    public Computador(String marca, Processador processador, int memoriaRAM) {
+        this.marca = marca;
+        this.processador = processador;
+        this.memoriaRAM = memoriaRAM;
+    }
     
     public String getMarca (){
         return marca;
@@ -34,5 +40,21 @@ public class Computador {
 
     public void setProcessador (Processador processador){
         this.processador = processador;
+    }
+
+    public void exibirComputador() {
+        System.out.println("Computador{" +
+                "marca='" + marca + '\'' +
+                ", memoriaRAM=" + memoriaRAM +
+                ", process=" + processador.getModelo() +
+                '}');
+    }
+
+    public void trocarProcessador(Processador novoProcessador){
+        processador = novoProcessador;
+    }
+
+    public void realizarManutencao() {
+        System.out.println("O computador está em manutenção preventiva!");
     }
 }
